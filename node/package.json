@@ -8,6 +8,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/graphql": "14.5.0",
     "@types/jest": "25.1.4",
     "@types/node": "13.9.1",
     "@typescript-eslint/eslint-plugin": "2.23.0",
@@ -82,5 +83,10 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "graphql": "15.0.0",
+    "reflect-metadata": "0.1.13",
+    "type-graphql": "0.17.6"
   }
 }
