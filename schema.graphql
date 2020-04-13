@@ -1,0 +1,27 @@
+enum EngineStatus {
+  ON, OFF
+}
+
+type Engine {
+  code: String
+  status: EngineStatus
+  fuel: Int!
+}
+
+input NewEngine {
+  status: EngineStatus!
+  fuel: Int!
+}
+
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}
+
+type RootQuery {
+  engine(code: String): Engine
+}
+
+type RootMutation {
+  registerEngine(newEngine: NewEngine): Engine
+}
